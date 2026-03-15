@@ -131,11 +131,10 @@ http-server
 
 <div align="center">
 
-![Desktop View](./Screenshot%202026-03-15%20170710.png)
-*Desktop View*
-
-![Mobile View](./Screenshot%202026-03-15%20170504.png)
-*Mobile View*
+| Desktop View | Mobile View |
+|:---:|:---:|
+| ![Desktop View](./screenshot-desktop.png) | ![Mobile View](./screenshot-mobile.png) |
+| *Desktop* | *Mobile* |
 
 </div>
 
