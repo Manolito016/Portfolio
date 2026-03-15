@@ -1,4 +1,26 @@
-/* ===== CSS Variables ===== */
+/**
+ * ===== Portfolio Stylesheet =====
+ * 
+ * Main CSS file for the portfolio website.
+ * Modern dark theme with purple accent colors.
+ * 
+ * Sections:
+ *   1. CSS Variables
+ *   2. Reset & Base
+ *   3. Navigation
+ *   4. Hero Section
+ *   5. About Section
+ *   6. Tech Stack
+ *   7. Projects
+ *   8. Contact
+ *   9. Footer
+ *   10. Responsive Design
+ * 
+ * @author Manolito016
+ * @version 1.0.0
+ */
+
+/* ===== 1. CSS Variables ===== */
 :root {
     --bg-primary: #0a0a0f;
     --bg-secondary: #12121a;

@@ -1,3 +1,13 @@
+/**
+ * ===== Portfolio JavaScript =====
+ * 
+ * Main interactive functionality for the portfolio website.
+ * Handles navigation, animations, and user interactions.
+ * 
+ * @author Manolito016
+ * @version 1.0.0
+ */
+
 // ===== Mobile Navigation Toggle =====
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
