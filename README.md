@@ -129,24 +129,15 @@ http-server
 
 ## 📸 Screenshots
 
-> 💡 **Tip**: Add actual screenshots of your portfolio to showcase the design!
-> 
-> To add screenshots:
-> 1. Take a screenshot of your portfolio (desktop & mobile view)
-> 2. Save as `screenshot-desktop.png` and `screenshot-mobile.png` in this folder
-> 3. Update the image references below
-
-<!-- 
 <div align="center">
 
-![Desktop View](./screenshot-desktop.png)
+![Desktop View](./Screenshot%202026-03-15%20170710.png)
 *Desktop View*
 
-![Mobile View](./screenshot-mobile.png)
+![Mobile View](./Screenshot%202026-03-15%20170504.png)
 *Mobile View*
 
 </div>
--->
 
 ---
 
