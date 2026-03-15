@@ -1,222 +1,189 @@
-# 🎵 Manolito016's Portfolio
-
-A clean, modern portfolio website built with good vibes.
-
-![Portfolio Preview](./preview.png)
-
 <div align="center">
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║   [mano lito016]_   ·   portfolio v2.0               ║
+║   vibe-driven development                            ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/Manolito016/Portfolio?style=for-the-badge&color=yellow)](https://github.com/Manolito016/Portfolio/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Manolito016/Portfolio?style=for-the-badge&color=blue)](https://github.com/Manolito016/Portfolio/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/Manolito016/Portfolio?style=for-the-badge&color=green)](https://github.com/Manolito016/Portfolio/issues)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](.)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](.)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](.)
+[![GitHub](https://img.shields.io/badge/GitHub-161b22?style=flat-square&logo=github&logoColor=white)](.)
+
+[![Stars](https://img.shields.io/github/stars/Manolito016/Portfolio?style=flat-square&color=39d353&label=stars)](https://github.com/Manolito016/Portfolio/stargazers)
+[![Forks](https://img.shields.io/github/forks/Manolito016/Portfolio?style=flat-square&color=58a6ff&label=forks)](https://github.com/Manolito016/Portfolio/network/members)
+[![Issues](https://img.shields.io/github/issues/Manolito016/Portfolio?style=flat-square&color=f0a832&label=issues)](https://github.com/Manolito016/Portfolio/issues)
+[![License](https://img.shields.io/badge/license-MIT-bc8cff?style=flat-square)](https://opensource.org/licenses/MIT)
 
 </div>
 
 ---
 
-## ✨ Features
+## `$ cat overview.md`
 
-- 🎨 **Modern Dark Theme** - Easy on the eyes with purple accent colors
-- 📱 **Fully Responsive** - Looks great on all devices
-- ⚡ **Smooth Animations** - Subtle scroll animations and hover effects
-- 🎯 **Clean Code** - Well-organized HTML, CSS, and JavaScript
-- 🚀 **Fast & Lightweight** - No frameworks, just pure web technologies
-- 🌙 **Mobile-First Design** - Optimized for all screen sizes
-- 🔍 **SEO Friendly** - Semantic HTML structure
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-| Frontend | Styling | Fonts | Hosting |
-|----------|---------|-------|---------|
-| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) | ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-%234285F4.svg?style=flat&logo=googlefonts&logoColor=white) | ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-%23121011.svg?style=flat&logo=github&logoColor=white) |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black) | ![Flexbox](https://img.shields.io/badge/Flexbox-%23764ABC.svg?style=flat&logo=css3&logoColor=white) | ![Poppins](https://img.shields.io/badge/Poppins-%23000000.svg?style=flat) | ![Netlify](https://img.shields.io/badge/Netlify-%23000000.svg?style=flat&logo=netlify&logoColor=white) |
-
-</div>
-
-## 📁 Project Structure
-
-```
-Portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # All styling and animations
-├── app.js              # Interactive features
-└── README.md           # This file
-```
-
-## 🚀 Getting Started
-
-### Option 1: Clone & Run Locally
-
-```bash
-# Clone the repository
-git clone https://github.com/Manolito016/Portfolio.git
-
-# Navigate to the folder
-cd Portfolio
-
-# Open index.html in your browser
-# Or use a local server (recommended)
-npx http-server
-```
-
-### Option 2: Deploy to GitHub Pages
-
-1. Go to your repository settings
-2. Navigate to **Pages**
-3. Select `main` branch as source
-4. Your site will be live at `https://manolito016.github.io/Portfolio/`
-
-### Option 3: Deploy to Netlify/Vercel
-
-1. Connect your GitHub repository
-2. Deploy automatically on every push
-
-<div align="center">
-
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy%20with-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/new)
-[![Deploy to Netlify](https://img.shields.io/badge/Deploy%20to-Netlify-%2300C7B7?style=for-the-badge&logo=netlify)](https://netlify.com)
-
-</div>
+A terminal-aesthetic portfolio built with pure HTML, CSS, and JavaScript — no frameworks, no bloat, just clean code and good vibes. Features a lo-fi dark theme, glitch animations, a typewriter terminal, custom cursor, and scroll-triggered reveals.
 
 ---
 
-## 🤝 Contributing
+## `$ ls features/`
 
-Contributions are welcome! Here's how you can help:
-
-### How to Contribute
-
-1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/Manolito016/Portfolio.git`
-3. **Create a branch**: `git checkout -b feature/your-feature-name`
-4. **Make your changes** and commit: `git commit -m 'Add some feature'`
-5. **Push** to your fork: `git push origin feature/your-feature-name`
-6. **Open a Pull Request**
-
-### Development Setup
-
-```bash
-# Install a local server (optional)
-npm install -g http-server
-
-# Run the server
-http-server
+```
+✦  terminal code block    — types itself out on load with syntax highlighting
+✦  glitch effect          — hero name splits into RGB offsets on a loop
+✦  custom cursor          — dot + trailing ring with smooth lag
+✦  role typewriter        — cycles through titles, deletes + retypes
+✦  scroll reveal          — cards animate in with staggered delays
+✦  scanline + noise       — lo-fi CRT screen overlay
+✦  floating window        — terminal gently bobs on a sine curve
+✦  active nav highlight   — current section lights up in the navbar
+✦  konami code easter egg — ↑↑↓↓←→←→BA triggers hue-rotate vibe mode
+✦  fully responsive       — mobile nav with animated hamburger toggle
+✦  reduced motion aware   — respects prefers-reduced-motion
 ```
 
-### Code Style Guidelines
-
-- Follow existing code formatting
-- Use meaningful variable names
-- Add comments for complex logic
-- Keep functions small and focused
-
-### Reporting Issues
-
-- Use the [GitHub Issues](https://github.com/Manolito016/Portfolio/issues) page
-- Provide a clear description of the issue
-- Include screenshots if applicable
-- Suggest possible solutions (optional)
-
 ---
 
-## 📸 Screenshots
+## `$ cat stack.json`
 
-<div align="center">
-
-| Desktop View | Mobile View |
-|:---:|:---:|
-| ![Desktop View](./screenshot-desktop.png) | ![Mobile View](./screenshot-mobile.png) |
-| *Desktop* | *Mobile* |
-
-</div>
-
----
-
-## 🎨 Customization
-
-### Update Your Info
-
-1. **index.html** - Change your name, bio, projects, and contact links
-2. **styles.css** - Modify colors in the `:root` section
-3. **app.js** - Add or remove interactive features
-
-### Color Scheme
-
-Edit the CSS variables in `styles.css`:
-
-```css
-:root {
-    --accent-primary: #7c3aed;      /* Main accent color */
-    --accent-secondary: #a855f7;    /* Secondary accent */
-    --bg-primary: #0a0a0f;          /* Main background */
+```json
+{
+  "html": "5",
+  "css": "3  →  variables, grid, flexbox, animations, @keyframes",
+  "javascript": "ES6+  →  IntersectionObserver, requestAnimationFrame",
+  "fonts": ["Space Mono", "DM Sans"],
+  "hosting": ["GitHub Pages", "Netlify", "Vercel"],
+  "dependencies": 0
 }
 ```
 
-## 📦 Sections Included
+---
 
-1. **Hero** - Introduction with animated code block
-2. **About** - 4 cards showcasing your focus
-3. **Tech Stack** - Skills display with icons
-4. **Projects** - Featured project cards
-5. **Contact** - Social links and call-to-action
+## `$ tree Portfolio/`
 
-## 🔧 Future Enhancements
-
-- [ ] Add more projects
-- [ ] Include a blog section
-- [ ] Add dark/light mode toggle
-- [ ] Integrate contact form
-- [ ] Add project screenshots
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+```
+Portfolio/
+├── index.html        # markup & structure
+├── styles.css        # all styling — variables, layout, animations
+├── app.js            # interactions — cursor, typewriters, observers
+└── README.md         # you are here
+```
 
 ---
 
-## 🌟 Show Your Support
+## `$ git clone && run`
 
-If you like this project, please give it a star! ⭐
+```bash
+# clone
+git clone https://github.com/Manolito016/Portfolio.git
+cd Portfolio
+
+# open directly (simplest)
+open index.html
+
+# or spin up a local server
+npx http-server .
+# → http://localhost:8080
+```
+
+---
+
+## `$ deploy --target=?`
+
+**GitHub Pages**
+```bash
+# push to main, then:
+# Settings → Pages → Branch: main → / (root) → Save
+# live at: https://manolito016.github.io/Portfolio/
+```
+
+**Netlify / Vercel** — connect repo, auto-deploys on every push. Done.
 
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Manolito016/Portfolio&type=Date)](https://star-history.com/#Manolito016/Portfolio&Date)
+[![Deploy Vercel](https://img.shields.io/badge/deploy_vercel-000?style=flat-square&logo=vercel)](https://vercel.com/new)
+[![Deploy Netlify](https://img.shields.io/badge/deploy_netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://netlify.com)
 
 </div>
 
 ---
 
-## 🤝 Connect
+## `$ vim styles.css  # customize`
 
-<div align="center">
+All design tokens live in one place:
 
-[![GitHub](https://img.shields.io/badge/GitHub-%40Manolito016-181717?style=for-the-badge&logo=github)](https://github.com/Manolito016)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live%20Demo-7c3aed?style=for-the-badge&logo=googlechrome)](https://manolito016.github.io/Portfolio/)
-[![Email](https://img.shields.io/badge/Email-Send%20Me%20a%20Message-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect%20with%20Me-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](#)
+```css
+:root {
+    --bg-0:     #080b0f;   /* deepest background      */
+    --bg-1:     #0d1117;   /* section backgrounds     */
+    --accent:   #39d353;   /* green — swap to taste   */
+    --cyan:     #58e6d9;   /* glitch left channel     */
+    --red:      #ff6b6b;   /* glitch right channel    */
+    --amber:    #f0a832;   /* string highlights       */
+    --font-mono: 'Space Mono', monospace;
+    --font-sans: 'DM Sans', sans-serif;
+}
+```
 
-</div>
+To update content: edit `index.html`. Projects, bio, links — all in plain HTML, clearly commented.
+
+---
+
+## `$ git contribute`
+
+```bash
+git fork https://github.com/Manolito016/Portfolio
+git checkout -b feature/your-idea
+# make changes
+git commit -m "feat: your message"
+git push origin feature/your-idea
+# open a pull request
+```
+
+Bug reports → [GitHub Issues](https://github.com/Manolito016/Portfolio/issues). Include browser, OS, and a screenshot if relevant.
+
+---
+
+## `$ cat roadmap.md`
+
+```diff
++ more projects section
++ blog / devlog
++ contact form (Formspree or similar)
++ light mode toggle
++ project screenshots / demos
+```
+
+---
+
+## `$ cat license.txt`
+
+MIT — use it, fork it, build on it. Just keep the vibes good.
 
 ---
 
 <div align="center">
 
-### 🎵 Good vibes, good code.
+```
+// connect
 
-**Built with** ✨ **by Manolito016**
+github   →  github.com/Manolito016
+portfolio → manolito016.github.io/Portfolio
+email    →  manolitoalmadenjr@gmail.com
+```
+
+[![GitHub](https://img.shields.io/badge/@Manolito016-161b22?style=flat-square&logo=github&logoColor=39d353)](https://github.com/Manolito016)
+[![Portfolio](https://img.shields.io/badge/live_demo-0d1117?style=flat-square&logo=googlechrome&logoColor=39d353)](https://manolito016.github.io/Portfolio/)
+[![Email](https://img.shields.io/badge/email-0d1117?style=flat-square&logo=gmail&logoColor=f0a832)](mailto:your-email@example.com)
 
 ---
 
-![Profile Views](https://komarev.com/ghpvc/?username=Manolito016&label=Profile%20Views&color=7c3aed&style=for-the-badge)
+*good vibes, good code.*  
+**built by Manolito016 ✨**
 
-[![Back to top](https://img.shields.io/badge/Back%20to%20Top-7c3aed?style=for-the-badge)](#-manolito016s-portfolio)
+![Profile Views](https://komarev.com/ghpvc/?username=Manolito016&label=views&color=39d353&style=flat-square)
 
 </div>
