@@ -29,6 +29,24 @@ A terminal-aesthetic portfolio built with pure HTML, CSS, and JavaScript — no 
 
 ---
 
+## `$ ls screenshots/`
+
+<div align="center">
+
+![Desktop View](screenshot-desktop.png)
+
+*Desktop View*
+
+![Mobile View](screenshot-mobile.png)
+
+*Mobile View*
+
+</div>
+
+---
+
+---
+
 ## `$ ls features/`
 
 ```
