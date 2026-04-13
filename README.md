@@ -194,8 +194,9 @@ email    →  manolitoalmadenjr@gmail.com
 ```
 
 [![GitHub](https://img.shields.io/badge/@Manolito016-161b22?style=flat-square&logo=github&logoColor=39d353)](https://github.com/Manolito016)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Manolito%20Almaden%20Jr.-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manolito-almaden-jr-a54a6634a/)
 [![Portfolio](https://img.shields.io/badge/live_demo-0d1117?style=flat-square&logo=googlechrome&logoColor=39d353)](https://manolito016.github.io/Portfolio/)
-[![Email](https://img.shields.io/badge/email-0d1117?style=flat-square&logo=gmail&logoColor=f0a832)](mailto:your-email@example.com)
+[![Email](https://img.shields.io/badge/email-0d1117?style=flat-square&logo=gmail&logoColor=f0a832)](mailto:manolitoalmadenjr@gmail.com)
 
 ---
 
