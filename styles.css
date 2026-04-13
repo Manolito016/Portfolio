@@ -42,6 +42,9 @@ body {
     color: var(--text-0);
     line-height: 1.65;
     overflow-x: hidden;
+}
+
+html.js-loaded body {
     cursor: none;
 }
 
@@ -424,6 +427,29 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
 .stat-label { font-size: 0.68rem; color: var(--text-2); }
 .stat-divider { color: var(--text-2); font-size: 1.2rem; }
 
+/* Hero Profile Photo */
+.hero-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.hero-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 16px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow), 0 8px 32px rgba(0,0,0,0.4);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.hero-photo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(57,211,83,0.3), 0 12px 40px rgba(0,0,0,0.5);
+}
+
 /* Terminal Window */
 .terminal-window {
     background: var(--bg-1);
@@ -566,7 +592,6 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 24px;
-    transition: var(--transition);
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -861,6 +886,104 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
     justify-content: center;
 }
 
+/* ===== 10.5. Certifications ===== */
+.certifications {
+    padding: 100px 0;
+    background: var(--bg-0);
+}
+
+.certs-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.certs-inner h2 {
+    font-family: var(--font-mono);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 40px;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.cert-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cert-card:hover {
+    border-color: var(--border-bright);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.cert-badge {
+    width: 56px; height: 56px;
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cert-emoji { font-size: 1.6rem; }
+
+.cert-info { flex: 1; }
+
+.cert-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-0);
+    margin-bottom: 4px;
+}
+
+.cert-issuer {
+    font-size: 0.82rem;
+    color: var(--text-1);
+    margin-bottom: 4px;
+}
+
+.cert-date {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+}
+
+.cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-2);
+    transition: color var(--transition);
+    white-space: nowrap;
+}
+
+.cert-link:hover { color: var(--accent); }
+.cert-link svg { transition: transform var(--transition); }
+.cert-link:hover svg { transform: translate(2px, -2px); }
+
 /* ===== 11. Contact ===== */
 .contact {
     padding: 100px 0;
@@ -943,6 +1066,7 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
 
 .cc-icon svg { width: 20px; height: 20px; }
 .email-icon svg { stroke: var(--text-1); }
+.linkedin-icon svg { fill: #0A66C2; }
 
 .cc-text {
     flex: 1;
@@ -1072,7 +1196,7 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-    .cursor, .cursor-trail { display: none; }
-    body { cursor: auto; }
+    *, *::before, *::after { animation-duration: 0s !important; transition-duration: 0s !important; }
+    html.js-loaded .cursor, html.js-loaded .cursor-trail { display: none; }
+    html.js-loaded body { cursor: auto; }
 }

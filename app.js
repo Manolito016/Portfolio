@@ -9,12 +9,18 @@ const cursor = document.getElementById('cursor');
 const cursorTrail = document.getElementById('cursorTrail');
 let mouseX = -100, mouseY = -100;
 let trailX = -100, trailY = -100;
+let cursorActive = false;
+let rafId = null;
 
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
     cursor.style.left = mouseX + 'px';
     cursor.style.top = mouseY + 'px';
+    if (!cursorActive) {
+        cursorActive = true;
+        animateTrail();
+    }
 });
 
 // Smooth trail
@@ -23,13 +29,14 @@ function animateTrail() {
     trailY += (mouseY - trailY) * 0.12;
     cursorTrail.style.left = trailX + 'px';
     cursorTrail.style.top = trailY + 'px';
-    requestAnimationFrame(animateTrail);
+    rafId = requestAnimationFrame(animateTrail);
 }
-animateTrail();
 
 document.addEventListener('mouseleave', () => {
     cursor.style.opacity = '0';
     cursorTrail.style.opacity = '0';
+    cursorActive = false;
+    if (rafId) cancelAnimationFrame(rafId);
 });
 document.addEventListener('mouseenter', () => {
     cursor.style.opacity = '1';
@@ -157,8 +164,10 @@ let roleIdx = 0;
 let charIdx = 0;
 let isDeleting = false;
 let roleTimeout;
+let roleActive = true;
 
 function typeRole() {
+    if (!roleActive) return;
     const current = roles[roleIdx];
     if (!isDeleting) {
         roleTextEl.textContent = current.slice(0, charIdx + 1);
@@ -178,6 +187,22 @@ function typeRole() {
     }
     roleTimeout = setTimeout(typeRole, isDeleting ? 45 : 70);
 }
+
+// Cleanup on page hide to prevent dangling timeouts
+window.addEventListener('beforeunload', () => {
+    roleActive = false;
+    clearTimeout(roleTimeout);
+});
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        roleActive = false;
+        clearTimeout(roleTimeout);
+    } else {
+        roleActive = true;
+        typeRole();
+    }
+});
 
 setTimeout(typeRole, 1000);
 
@@ -256,7 +281,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.about-card, .stack-item, .project-item').forEach(el => {
+document.querySelectorAll('.about-card, .stack-item, .project-item, .cert-card').forEach(el => {
     revealObserver.observe(el);
 });
 
