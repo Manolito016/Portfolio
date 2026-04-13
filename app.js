@@ -155,7 +155,7 @@ setTimeout(typeNextLine, 800);
 // ===== Role Typewriter =====
 const roleTextEl = document.getElementById('roleText');
 const roles = [
-    'Vibe Coder 🎵',
+    'Web Developer 💻',
     'Building cool stuff ✨',
     'Learning every day 🌱',
     'JS/TS enthusiast 💛',
@@ -311,6 +311,6 @@ const styles = [
     'color: #f0a832; font-size: 11px; font-family: monospace;'
 ];
 
-console.log('%c\n  ╔══════════════════════════════╗\n  ║   hey fellow vibe coder 👾   ║\n  ╚══════════════════════════════╝\n', styles[0]);
+console.log('%c\n  ╔══════════════════════════════╗\n  ║   hey fellow developer 👾   ║\n  ╚══════════════════════════════╝\n', styles[0]);
 console.log('%c  checking out the source? we\'re vibing on the same frequency.\n', styles[1]);
 console.log('%c  try: ↑ ↑ ↓ ↓ ← → ← → B A', styles[2]);
