@@ -427,29 +427,6 @@ body:has(button:hover) .cursor { width: 20px; height: 20px; }
 .stat-label { font-size: 0.68rem; color: var(--text-2); }
 .stat-divider { color: var(--text-2); font-size: 1.2rem; }
 
-/* Hero Profile Photo */
-.hero-photo-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
-}
-
-.hero-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 16px;
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 30px var(--accent-glow), 0 8px 32px rgba(0,0,0,0.4);
-    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-
-.hero-photo:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 40px rgba(57,211,83,0.3), 0 12px 40px rgba(0,0,0,0.5);
-}
-
 /* Terminal Window */
 .terminal-window {
     background: var(--bg-1);
