@@ -1,7 +1,7 @@
 /**
  * ===== Portfolio JavaScript =====
- * Terminal lo-fi aesthetic interactions
- * @author Manolito016  @version 2.0.0
+ * Modern professional interactions
+ * @author Manolito016  @version 3.0.0
  */
 
 // ===== Custom Cursor =====
@@ -25,8 +25,8 @@ document.addEventListener('mousemove', (e) => {
 
 // Smooth trail
 function animateTrail() {
-    trailX += (mouseX - trailX) * 0.12;
-    trailY += (mouseY - trailY) * 0.12;
+    trailX += (mouseX - trailX) * 0.15;
+    trailY += (mouseY - trailY) * 0.15;
     cursorTrail.style.left = trailX + 'px';
     cursorTrail.style.top = trailY + 'px';
     rafId = requestAnimationFrame(animateTrail);
@@ -40,78 +40,61 @@ document.addEventListener('mouseleave', () => {
 });
 document.addEventListener('mouseenter', () => {
     cursor.style.opacity = '1';
-    cursorTrail.style.opacity = '0.45';
+    cursorTrail.style.opacity = '0.3';
 });
 
 // ===== Terminal Code Typewriter =====
 const terminalEl = document.getElementById('terminalCode');
 
 const codeLines = [
-    { text: '// vibe-driven development', cls: 't-cmt', delay: 0 },
+    { text: '// system initialization', cls: 't-cmt', delay: 0 },
     { text: '', delay: 80 },
-    { text: 'const coder = {', cls: '', delay: 100,
+    { text: 'const engineer = {', cls: '', delay: 100,
       parts: [
         { text: 'const ', cls: 't-kw' },
-        { text: 'coder', cls: 't-var' },
+        { text: 'engineer', cls: 't-var' },
         { text: ' = {', cls: '' }
       ]
     },
-    { text: "  name: 'Manolito016',", delay: 60,
+    { text: "  name: 'Manolito Almaden Jr.',", delay: 60,
       parts: [
         { text: '  name', cls: 't-key' },
         { text: ': ', cls: '' },
-        { text: "'Manolito016'", cls: 't-str' },
+        { text: "'Manolito Almaden Jr.'", cls: 't-str' },
         { text: ',', cls: '' }
       ]
     },
-    { text: "  style: 'vibe-driven',", delay: 60,
+    { text: "  role: 'Software Engineer',", delay: 60,
       parts: [
-        { text: '  style', cls: 't-key' },
+        { text: '  role', cls: 't-key' },
         { text: ': ', cls: '' },
-        { text: "'vibe-driven'", cls: 't-str' },
+        { text: "'Software Engineer'", cls: 't-str' },
         { text: ',', cls: '' }
       ]
     },
-    { text: "  stack: ['JS', 'TS', 'CSS'],", delay: 60,
+    { text: "  stack: ['React', 'TypeScript', 'Node'],", delay: 60,
       parts: [
         { text: '  stack', cls: 't-key' },
         { text: ': [', cls: '' },
-        { text: "'JS'", cls: 't-str' },
+        { text: "'React'", cls: 't-str' },
         { text: ', ', cls: '' },
-        { text: "'TS'", cls: 't-str' },
+        { text: "'TypeScript'", cls: 't-str' },
         { text: ', ', cls: '' },
-        { text: "'CSS'", cls: 't-str' },
+        { text: "'Node'", cls: 't-str' },
         { text: '],', cls: '' }
       ]
     },
-    { text: "  hustle: false,", delay: 60,
-      parts: [
-        { text: '  hustle', cls: 't-key' },
-        { text: ': ', cls: '' },
-        { text: 'false', cls: 't-kw' },
-        { text: ',', cls: '' }
-      ]
-    },
-    { text: "  vibeLevel: Infinity,", delay: 60,
-      parts: [
-        { text: '  vibeLevel', cls: 't-key' },
-        { text: ': ', cls: '' },
-        { text: 'Infinity', cls: 't-num' },
-        { text: ',', cls: '' }
-      ]
-    },
-    { text: '', delay: 60 },
-    { text: '  build() {', delay: 60,
+    { text: '  solve(problem: string) {', delay: 60,
       parts: [
         { text: '  ', cls: '' },
-        { text: 'build', cls: 't-fn' },
-        { text: '() {', cls: '' }
+        { text: 'solve', cls: 't-fn' },
+        { text: '(problem: string) {', cls: '' }
       ]
     },
-    { text: "    return '✨ cool stuff';", delay: 60,
+    { text: "    return `Elegant solution for ${problem}`;", delay: 60,
       parts: [
         { text: '    return ', cls: 't-kw' },
-        { text: "'✨ cool stuff'", cls: 't-str' },
+        { text: '`Elegant solution for ${problem}`', cls: 't-str' },
         { text: ';', cls: '' }
       ]
     },
@@ -137,7 +120,6 @@ function buildLine(line) {
 }
 
 let lineIndex = 0;
-let totalDelay = 400;
 
 function typeNextLine() {
     if (lineIndex >= codeLines.length) return;
@@ -146,19 +128,18 @@ function typeNextLine() {
     div.appendChild(buildLine(line));
     terminalEl.appendChild(div);
     lineIndex++;
-    totalDelay += line.delay || 80;
-    setTimeout(typeNextLine, line.delay || 80);
+    setTimeout(typeNextLine, line.delay || 70);
 }
 
-setTimeout(typeNextLine, 800);
+setTimeout(typeNextLine, 1200);
 
 // ===== Role Typewriter =====
 const roleTextEl = document.getElementById('roleText');
 const roles = [
-    'Web Developer 💻',
-    'Building cool stuff ✨',
-    'Learning every day 🌱',
-    'JS/TS enthusiast 💛',
+    'Full-Stack Software Engineer 💻',
+    'Building Scalable Web Apps 🚀',
+    'System Architect & Strategist 🏗️',
+    'TypeScript Enthusiast 💙',
 ];
 let roleIdx = 0;
 let charIdx = 0;
@@ -174,7 +155,7 @@ function typeRole() {
         charIdx++;
         if (charIdx === current.length) {
             isDeleting = true;
-            roleTimeout = setTimeout(typeRole, 2200);
+            roleTimeout = setTimeout(typeRole, 2500);
             return;
         }
     } else {
@@ -185,7 +166,7 @@ function typeRole() {
             roleIdx = (roleIdx + 1) % roles.length;
         }
     }
-    roleTimeout = setTimeout(typeRole, isDeleting ? 45 : 70);
+    roleTimeout = setTimeout(typeRole, isDeleting ? 30 : 60);
 }
 
 // Cleanup on page hide to prevent dangling timeouts
@@ -252,7 +233,7 @@ window.addEventListener('scroll', updateActiveNav, { passive: true });
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 80) {
-        navbar.style.borderBottomColor = 'rgba(57,211,83,0.12)';
+        navbar.style.borderBottomColor = 'rgba(59, 130, 246, 0.2)';
     } else {
         navbar.style.borderBottomColor = '';
     }
@@ -287,30 +268,14 @@ document.querySelectorAll('.about-card, .stack-item, .project-item, .cert-card')
 
 // Stagger stack items
 document.querySelectorAll('.stack-item').forEach((el, i) => {
-    el.dataset.delay = i * 70;
-});
-
-// ===== Keyboard Shortcuts Easter Egg =====
-const keyBuffer = [];
-const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
-
-document.addEventListener('keydown', (e) => {
-    keyBuffer.push(e.key);
-    if (keyBuffer.length > KONAMI.length) keyBuffer.shift();
-    if (keyBuffer.join(',') === KONAMI.join(',')) {
-        document.body.style.filter = 'hue-rotate(180deg)';
-        setTimeout(() => document.body.style.filter = '', 3000);
-        console.log('%c🎮 KONAMI! Vibe mode activated.', 'color: #39d353; font-size: 14px; font-family: monospace;');
-    }
+    el.dataset.delay = i * 50;
 });
 
 // ===== Console Easter Egg =====
 const styles = [
-    'color: #39d353; font-size: 13px; font-family: monospace; line-height: 1.6',
-    'color: #8b949e; font-size: 11px; font-family: monospace; line-height: 1.6',
-    'color: #f0a832; font-size: 11px; font-family: monospace;'
+    'color: #3b82f6; font-size: 13px; font-family: sans-serif; font-weight: bold;',
+    'color: #94a3b8; font-size: 11px; font-family: sans-serif;'
 ];
 
-console.log('%c\n  ╔══════════════════════════════╗\n  ║   hey fellow developer 👾   ║\n  ╚══════════════════════════════╝\n', styles[0]);
-console.log('%c  checking out the source? we\'re vibing on the same frequency.\n', styles[1]);
-console.log('%c  try: ↑ ↑ ↓ ↓ ← → ← → B A', styles[2]);
+console.log('%c\n  ╔══════════════════════════════╗\n  ║   System Profile Loaded     ║\n  ╚══════════════════════════════╝\n', styles[0]);
+console.log('%c  Always looking for high-impact opportunities.\n', styles[1]);

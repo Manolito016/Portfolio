@@ -4,10 +4,10 @@
     <script>document.documentElement.classList.add('js-loaded');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manolito Almaden Jr. — Portfolio. JavaScript, TypeScript, and modern web development projects. Building cool tools and apps.">
-    <meta name="theme-color" content="#080b0f">
+    <meta name="description" content="Manolito Almaden Jr. — Portfolio. Software Engineer focused on building clean, functional, and user-centric web applications.">
+    <meta name="theme-color" content="#0f172a">
     <meta property="og:title" content="Manolito Almaden Jr. | Portfolio">
-    <meta property="og:description" content="JavaScript/TypeScript developer building cool tools and apps. Check out my projects and get in touch.">
+    <meta property="og:description" content="Software Engineer building modern web experiences. Check out my projects and get in touch.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manolito016.github.io/Portfolio/">
     <meta name="twitter:card" content="summary_large_image">
@@ -15,34 +15,28 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Custom cursor -->
     <div class="cursor" id="cursor" aria-hidden="true"></div>
     <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
 
-    <!-- Scanline overlay -->
-    <div class="scanlines" aria-hidden="true"></div>
-
-    <!-- Noise texture -->
-    <div class="noise" aria-hidden="true"></div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#home" class="logo">
                 <span class="logo-bracket">[</span>
-                <span class="logo-name">mano</span>
-                <span class="logo-accent">lito016</span>
+                <span class="logo-name">Manolito</span>
+                <span class="logo-accent">Almaden</span>
                 <span class="logo-bracket">]</span>
                 <span class="logo-cursor">_</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" data-index="01">home</a></li>
-                <li><a href="#about" data-index="02">about</a></li>
-                <li><a href="#projects" data-index="03">projects</a></li>
-                <li><a href="#contact" data-index="04">contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">
                 <span></span><span></span><span></span>
@@ -53,83 +47,67 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg-grid" aria-hidden="true"></div>
-        <div class="hero-glow" aria-hidden="true"></div>
 
         <div class="hero-inner">
-            <div class="hero-left">
+            <div class="hero-content">
                 <div class="status-bar">
                     <span class="status-dot"></span>
-                    <span>currently vibing &amp; building</span>
+                    <span>Available for new projects</span>
                 </div>
 
                 <h1 class="hero-title">
-                    <span class="line-label">~/</span>
-                    <span class="glitch" data-text="Manolito Almaden Jr.">Manolito Almaden Jr.</span>
+                    Building digital <br>
+                    <span class="glitch" data-text="experiences.">experiences.</span>
                 </h1>
 
                 <div class="hero-role">
-                    <span class="role-prefix">$ </span>
                     <span class="role-text" id="roleText"></span>
-                    <span class="role-blink">█</span>
+                    <span class="role-blink">|</span>
                 </div>
 
                 <p class="hero-desc">
-                    I code when the vibe is right — building projects I actually 
-                    want to use, learning at my own pace, no hustle culture needed.
+                    I'm Manolito Almaden Jr., a passionate Software Engineer focused on building 
+                    clean, functional, and user-centric web applications.
                 </p>
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn-primary">
-                        <span>view_projects()</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <span>View Projects</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                     <a href="#contact" class="btn-ghost">
-                        <span>say_hello()</span>
+                        <span>Get in Touch</span>
                     </a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-num">2+</span>
-                        <span class="stat-label">projects</span>
+                        <span class="stat-label">Projects</span>
                     </div>
                     <div class="stat-divider">/</div>
                     <div class="stat">
                         <span class="stat-num">JS</span>
-                        <span class="stat-label">+ TS</span>
+                        <span class="stat-label">TypeScript</span>
                     </div>
                     <div class="stat-divider">/</div>
                     <div class="stat">
-                        <span class="stat-num">∞</span>
-                        <span class="stat-label">good vibes</span>
+                        <span class="stat-num">2026</span>
+                        <span class="stat-label">Year</span>
                     </div>
                 </div>
             </div>
 
             <div class="hero-right">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot dot-red"></span>
-                            <span class="dot dot-yellow"></span>
-                            <span class="dot dot-green"></span>
-                        </div>
-                        <span class="terminal-title">coder.config.ts</span>
-                    </div>
-                    <div class="terminal-body">
-                        <pre class="terminal-code" id="terminalCode"></pre>
-                    </div>
-                    <div class="terminal-footer">
-                        <span class="term-info">TypeScript</span>
-                        <span class="term-info">UTF-8</span>
-                        <span class="term-info">✓ no errors</span>
-                    </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg"></div>
+                    <img src="profile-img.png" alt="Manolito Almaden Jr." class="profile-img">
                 </div>
             </div>
         </div>
 
         <div class="scroll-hint">
-            <span>scroll</span>
+            <span>Scroll</span>
             <div class="scroll-line"></div>
         </div>
     </section>
@@ -137,55 +115,66 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="section-label">
-            <span class="label-num">// 02</span>
-            <span class="label-text">about.md</span>
+            <span class="label-num">// 01</span>
+            <span class="label-text">About Me</span>
         </div>
 
         <div class="about-inner">
             <div class="about-heading">
-                <h2>Who I Am</h2>
-                <p class="about-sub">A few things worth knowing</p>
+                <h2>System Profile</h2>
+                <p class="about-sub">A deep dive into my background and approach</p>
             </div>
 
             <div class="about-grid">
                 <div class="about-card" data-delay="0">
                     <div class="card-top">
-                        <span class="card-emoji">🔭</span>
-                        <span class="card-tag">status</span>
+                        <span class="card-emoji">🚀</span>
+                        <span class="card-tag">Mission</span>
                     </div>
-                    <h3>Currently Working On</h3>
-                    <p>Whatever feels fun and interesting at the moment</p>
-                    <div class="card-bar"><div class="card-bar-fill" style="width: 70%"></div></div>
+                    <h3>Technical Lead</h3>
+                    <p>Driving innovation through clean code and efficient architectures.</p>
+                    <div class="card-bar"><div class="card-bar-fill" style="width: 85%"></div></div>
                 </div>
 
                 <div class="about-card" data-delay="100">
                     <div class="card-top">
-                        <span class="card-emoji">🌱</span>
-                        <span class="card-tag">learning</span>
+                        <span class="card-emoji">🛠️</span>
+                        <span class="card-tag">Focus</span>
                     </div>
-                    <h3>Currently Learning</h3>
-                    <p>JavaScript, TypeScript & modern Web Dev</p>
-                    <div class="card-bar"><div class="card-bar-fill" style="width: 55%"></div></div>
+                    <h3>Modern Tooling</h3>
+                    <p>Leveraging React, Node, and TypeScript for robust solutions.</p>
+                    <div class="card-bar"><div class="card-bar-fill" style="width: 75%"></div></div>
                 </div>
 
                 <div class="about-card" data-delay="200">
                     <div class="card-top">
-                        <span class="card-emoji">💡</span>
-                        <span class="card-tag">approach</span>
+                        <span class="card-emoji">🧩</span>
+                        <span class="card-tag">Philosophy</span>
                     </div>
-                    <h3>Building Philosophy</h3>
-                    <p>Tools and apps I actually want to use myself</p>
+                    <h3>Problem Solver</h3>
+                    <p>Translating complex requirements into intuitive user experiences.</p>
                     <div class="card-bar"><div class="card-bar-fill" style="width: 90%"></div></div>
                 </div>
+            </div>
 
-                <div class="about-card" data-delay="300">
-                    <div class="card-top">
-                        <span class="card-emoji">🎧</span>
-                        <span class="card-tag">formula</span>
+            <div style="margin-top: 80px;">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="terminal-title">developer.profile.ts</span>
                     </div>
-                    <h3>The Equation</h3>
-                    <p>Code + Good Vibes = Great Projects, every time</p>
-                    <div class="card-bar"><div class="card-bar-fill" style="width: 100%"></div></div>
+                    <div class="terminal-body">
+                        <pre class="terminal-code" id="terminalCode"></pre>
+                    </div>
+                    <div class="terminal-footer">
+                        <span class="term-info">TypeScript</span>
+                        <span class="term-info">UTF-8</span>
+                        <span class="term-info">✓ system healthy</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,46 +183,46 @@
     <!-- Tech Stack Section -->
     <section class="stack">
         <div class="section-label">
-            <span class="label-num">// 03</span>
-            <span class="label-text">stack.json</span>
+            <span class="label-num">// 02</span>
+            <span class="label-text">Tech Stack</span>
         </div>
 
         <div class="stack-inner">
-            <h2>Tech Stack</h2>
+            <h2>Core Competencies</h2>
             <div class="stack-grid">
                 <div class="stack-item" data-tech="JS">
                     <div class="stack-icon js">JS</div>
                     <div class="stack-info">
                         <span class="stack-name">JavaScript</span>
-                        <span class="stack-level">primary</span>
+                        <span class="stack-level">Expert</span>
                     </div>
                 </div>
                 <div class="stack-item" data-tech="TS">
                     <div class="stack-icon ts">TS</div>
                     <div class="stack-info">
                         <span class="stack-name">TypeScript</span>
-                        <span class="stack-level">learning</span>
+                        <span class="stack-level">Advanced</span>
                     </div>
                 </div>
                 <div class="stack-item" data-tech="HTML">
                     <div class="stack-icon html">HTML</div>
                     <div class="stack-info">
                         <span class="stack-name">HTML5</span>
-                        <span class="stack-level">solid</span>
+                        <span class="stack-level">Expert</span>
                     </div>
                 </div>
                 <div class="stack-item" data-tech="CSS">
                     <div class="stack-icon css">CSS</div>
                     <div class="stack-info">
                         <span class="stack-name">CSS3</span>
-                        <span class="stack-level">solid</span>
+                        <span class="stack-level">Expert</span>
                     </div>
                 </div>
                 <div class="stack-item" data-tech="GIT">
                     <div class="stack-icon git">Git</div>
                     <div class="stack-info">
                         <span class="stack-name">Git</span>
-                        <span class="stack-level">daily use</span>
+                        <span class="stack-level">Proficient</span>
                     </div>
                 </div>
                 <div class="stack-item" data-tech="GH">
@@ -242,7 +231,7 @@
                     </div>
                     <div class="stack-info">
                         <span class="stack-name">GitHub</span>
-                        <span class="stack-level">home base</span>
+                        <span class="stack-level">Daily Use</span>
                     </div>
                 </div>
             </div>
@@ -252,12 +241,12 @@
     <!-- Certifications Section -->
     <section class="certifications">
         <div class="section-label">
-            <span class="label-num">// 04</span>
-            <span class="label-text">certs.json</span>
+            <span class="label-num">// 03</span>
+            <span class="label-text">Credentials</span>
         </div>
 
         <div class="certs-inner">
-            <h2>Certifications</h2>
+            <h2>Professional Certifications</h2>
 
             <div class="certs-grid">
                 <div class="cert-card reveal-cert">
@@ -270,7 +259,7 @@
                         <span class="cert-date">2026</span>
                     </div>
                     <a href="https://www.credly.com/go/F2SniiMATsxWNpNzPTDxgg" target="_blank" rel="noopener noreferrer" class="cert-link">
-                        <span>Verify</span>
+                        <span>Verify Credential</span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                     </a>
                 </div>
@@ -281,8 +270,8 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="section-label">
-            <span class="label-num">// 05</span>
-            <span class="label-text">projects/</span>
+            <span class="label-num">// 04</span>
+            <span class="label-text">Portfolio</span>
         </div>
 
         <div class="projects-inner">
@@ -295,18 +284,18 @@
                     <div class="project-content">
                         <div class="project-meta">
                             <span class="project-lang ts-dot">TypeScript</span>
-                            <span class="project-type">tool</span>
+                            <span class="project-type">Engineering</span>
                         </div>
                         <h3 class="project-title">
                             <a href="https://github.com/Manolito016/ToramDamageCalcu" target="_blank" rel="noopener noreferrer">
                                 ToramDamageCalcu
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </h3>
-                        <p class="project-desc">A damage calculator for Toram Online that helps players optimize their character builds and maximize DPS through smart stat analysis.</p>
+                        <p class="project-desc">A complex damage calculator for Toram Online that helps players optimize character builds and maximize performance through data-driven analysis.</p>
                         <div class="project-tags">
                             <span>TypeScript</span>
-                            <span>Calculator</span>
+                            <span>Algorithm</span>
                             <span>Gaming</span>
                         </div>
                     </div>
@@ -323,15 +312,15 @@
                     <div class="project-content">
                         <div class="project-meta">
                             <span class="project-lang js-dot">JavaScript</span>
-                            <span class="project-type">web app</span>
+                            <span class="project-type">Web Application</span>
                         </div>
                         <h3 class="project-title">
                             <a href="https://github.com/Manolito016/OJT_JOURNAL" target="_blank" rel="noopener noreferrer">
-                                OJT_JOURNAL
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                OJT Journal Platform
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </h3>
-                        <p class="project-desc">A digital journaling platform for students to document, track, and reflect on their On-the-Job Training experiences in one organized place.</p>
+                        <p class="project-desc">A professional digital journaling platform designed for students to document, track, and reflect on their professional internship experiences.</p>
                         <div class="project-tags">
                             <span>JavaScript</span>
                             <span>Web App</span>
@@ -349,7 +338,7 @@
             <div class="projects-cta">
                 <a href="https://github.com/Manolito016" target="_blank" rel="noopener noreferrer" class="btn-ghost">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-6.27 0-1.38.48-2.535 1.26-3.435-.12-.3-.555-1.74.12-2.64 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.675.9.24 2.34.12 2.64.78.9 1.26 2.04 1.26 3.435 0 4.95-2.805 5.97-5.475 6.27.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span>see all on GitHub</span>
+                    <span>Explore more on GitHub</span>
                 </a>
             </div>
         </div>
@@ -359,16 +348,16 @@
     <section id="contact" class="contact">
         <div class="section-label">
             <span class="label-num">// 05</span>
-            <span class="label-text">contact.sh</span>
+            <span class="label-text">Contact</span>
         </div>
 
         <div class="contact-inner">
             <div class="contact-left">
                 <h2>Let's Connect</h2>
-                <p>Want to collaborate, share ideas, or just say hi? I'm always down to talk code and vibes.</p>
+                <p>I'm currently looking for new opportunities and collaborations. If you have a question or just want to say hi, I'll try my best to get back to you!</p>
                 <div class="contact-note">
-                    <span class="cn-prefix">$ echo</span>
-                    <span class="cn-text">"currently open to cool projects"</span>
+                    <span class="cn-prefix">Status:</span>
+                    <span class="cn-text">Open to exciting new roles</span>
                 </div>
             </div>
 
@@ -379,7 +368,7 @@
                     </div>
                     <div class="cc-text">
                         <span class="cc-label">GitHub</span>
-                        <span class="cc-handle">Manolito Almaden Jr.</span>
+                        <span class="cc-handle">@Manolito016</span>
                     </div>
                     <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -390,7 +379,7 @@
                     </div>
                     <div class="cc-text">
                         <span class="cc-label">Email</span>
-                        <span class="cc-handle">drop me a line</span>
+                        <span class="cc-handle">manolitoalmadenjr@gmail.com</span>
                     </div>
                     <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -401,7 +390,7 @@
                     </div>
                     <div class="cc-text">
                         <span class="cc-label">LinkedIn</span>
-                        <span class="cc-handle">let's connect</span>
+                        <span class="cc-handle">Manolito Almaden Jr.</span>
                     </div>
                     <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -414,13 +403,13 @@
         <div class="footer-inner">
             <div class="footer-left">
                 <span class="footer-logo">Manolito Almaden Jr.</span>
-                <span class="footer-line">—</span>
-                <span class="footer-sub">developer</span>
+                <span class="footer-line">|</span>
+                <span class="footer-sub">Software Engineer</span>
             </div>
             <div class="footer-right">
                 <span>© 2026</span>
                 <span class="footer-sep">·</span>
-                <span>built with good vibes ✨</span>
+                <span>Crafted with excellence 🚀</span>
             </div>
         </div>
     </footer>
