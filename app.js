@@ -136,10 +136,10 @@ setTimeout(typeNextLine, 1200);
 // ===== Role Typewriter =====
 const roleTextEl = document.getElementById('roleText');
 const roles = [
-    'Full-Stack Software Engineer 💻',
-    'Building Scalable Web Apps 🚀',
-    'System Architect & Strategist 🏗️',
-    'TypeScript Enthusiast 💙',
+    'Full-Stack Software Engineer',
+    'Building Scalable Web Apps',
+    'System Architect & Strategist',
+    'TypeScript Enthusiast',
 ];
 let roleIdx = 0;
 let charIdx = 0;
@@ -279,3 +279,62 @@ const styles = [
 
 console.log('%c\n  ╔══════════════════════════════╗\n  ║   System Profile Loaded     ║\n  ╚══════════════════════════════╝\n', styles[0]);
 console.log('%c  Always looking for high-impact opportunities.\n', styles[1]);
+
+// ===== Smooth Parallax Effect =====
+let ticking = false;
+
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const heroImage = document.querySelector('.hero-image-wrapper');
+    
+    if (heroImage) {
+        const rate = scrolled * 0.3;
+        heroImage.style.transform = `translateY(${rate}px)`;
+    }
+    
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
+}, { passive: true });
+
+// ===== Magnetic Button Effect =====
+const magneticElements = document.querySelectorAll('.btn-primary, .btn-ghost');
+
+magneticElements.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+    });
+});
+
+// ===== Skill Card Tilt Effect =====
+const tiltCards = document.querySelectorAll('.about-card, .cert-card');
+
+tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        
+        const rotateX = (y - 0.5) * -8;
+        const rotateY = (x - 0.5) * 8;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+    });
+});
