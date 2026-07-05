@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 /** Hero section — Facebook-style profile layout with cover banner */
 export function Hero() {
   return (
@@ -11,7 +13,7 @@ export function Hero() {
       <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden">
         {/* Cover photo */}
         <Image
-          src="/cover.png"
+          src={`${basePath}/cover.png`}
           alt="Cover banner"
           fill
           className="object-cover"
@@ -34,7 +36,7 @@ export function Hero() {
             >
               <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-4 ring-[var(--background)] shadow-xl">
                 <Image
-                  src="/profile.png"
+                  src={`${basePath}/profile.png`}
                   alt="Manolito Almaden Jr. profile picture"
                   width={144}
                   height={144}
