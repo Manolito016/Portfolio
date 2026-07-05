@@ -8,7 +8,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 /** Hero section — Facebook-style profile layout with cover banner */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden pt-8">
       {/* ===== Cover Banner ===== */}
       <div className="relative h-48 sm:h-56 md:h-72 overflow-hidden">
         {/* Cover photo */}
