@@ -10,14 +10,12 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden pt-8">
       {/* ===== Cover Banner ===== */}
-      <div className="relative h-48 sm:h-56 md:h-80 lg:h-96 overflow-hidden">
-        {/* Cover photo */}
-        <Image
+      <div className="relative overflow-hidden">
+        {/* Cover photo — full image, no cropping */}
+        <img
           src={`${basePath}/cover.png`}
           alt="Cover banner"
-          fill
-          className="object-cover object-center"
-          priority
+          className="w-full h-auto block"
         />
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/30" />
