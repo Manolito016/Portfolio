@@ -1,0 +1,18 @@
+import type { SiteConfig } from '@/lib/types';
+
+export const siteConfig: SiteConfig = {
+  name: 'Manolito016',
+  displayName: 'Lito_016',
+  title: 'Manolito Almaden Jr. - AI Solution Developer',
+  description:
+    'AI Solution Developer passionate about building intelligent web applications, agentic workflows, and open-source contributions. Explore my projects, skills, and GitHub activity.',
+  url: 'https://manolito016.dev',
+  ogImage: 'https://manolito016.dev/og.png',
+  github: 'https://github.com/Manolito016',
+  email: 'mailto:manolitoalmadenjr@gmail.com',
+  linkedin: 'https://linkedin.com/in/manolito016',
+};
+
+export const GITHUB_USERNAME = 'Manolito016';
+export const GITHUB_API = 'https://api.github.com';
+export const GITHUB_AVATAR = 'https://avatars.githubusercontent.com/u/146796071?v=4';
