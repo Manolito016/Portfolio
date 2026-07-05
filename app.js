@@ -338,3 +338,182 @@ tiltCards.forEach(card => {
         card.style.transform = '';
     });
 });
+
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        if (next === 'dark') {
+            html.removeAttribute('data-theme');
+        } else {
+            html.setAttribute('data-theme', 'light');
+        }
+        localStorage.setItem('portfolio-theme', next);
+    });
+}
+
+// ===== Scroll Progress Bar =====
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateScrollProgress() {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = progress + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+// ===== Back to Top Button =====
+const backToTop = document.getElementById('backToTop');
+
+function updateBackToTop() {
+    if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+}
+
+if (backToTop) {
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+
+// ===== Hero Particles =====
+const particleCanvas = document.getElementById('heroParticles');
+
+if (particleCanvas) {
+    const ctx = particleCanvas.getContext('2d');
+    let particles = [];
+    let animId;
+
+    function resizeCanvas() {
+        const hero = particleCanvas.parentElement;
+        particleCanvas.width = hero.offsetWidth;
+        particleCanvas.height = hero.offsetHeight;
+    }
+
+    function createParticles() {
+        particles = [];
+        const count = Math.min(50, Math.floor((particleCanvas.width * particleCanvas.height) / 15000));
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * particleCanvas.width,
+                y: Math.random() * particleCanvas.height,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                size: Math.random() * 2 + 0.5,
+                opacity: Math.random() * 0.3 + 0.1,
+            });
+        }
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+        const isLight = html.getAttribute('data-theme') === 'light';
+        const color = isLight ? '59, 130, 246' : '59, 130, 246';
+
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0) p.x = particleCanvas.width;
+            if (p.x > particleCanvas.width) p.x = 0;
+            if (p.y < 0) p.y = particleCanvas.height;
+            if (p.y > particleCanvas.height) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${color}, ${p.opacity})`;
+            ctx.fill();
+        });
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(${color}, ${0.06 * (1 - dist / 120)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        animId = requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    createParticles();
+    drawParticles();
+
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        createParticles();
+    });
+
+    // Pause particles when not visible
+    const heroObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            if (!animId) drawParticles();
+        } else {
+            cancelAnimationFrame(animId);
+            animId = null;
+        }
+    }, { threshold: 0.1 });
+
+    heroObserver.observe(document.querySelector('.hero'));
+}
+
+// ===== Contact Form =====
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('formName').value;
+        const email = document.getElementById('formEmail').value;
+        const message = document.getElementById('formMessage').value;
+
+        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const mailtoLink = `mailto:manolitoalmadenjr@gmail.com?subject=${subject}&body=${body}`;
+
+        window.location.href = mailtoLink;
+    });
+}
+
+// ===== Timeline Reveal =====
+const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = el.dataset.delay ? parseInt(el.dataset.delay) : 0;
+            setTimeout(() => el.classList.add('visible'), delay);
+            timelineObserver.unobserve(el);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal-timeline').forEach(el => {
+    timelineObserver.observe(el);
+});
