@@ -12,4 +12,10 @@ export const hostedProjects: HostedProject[] = [
     url: 'https://ai-saas-landing.pages.dev/',
     tags: ['AI', 'SaaS', 'Next.js'],
   },
+  {
+    name: 'Dish Manager',
+    description: 'Recipe and meal planning management application.',
+    url: 'https://dish-manager.pages.dev/',
+    tags: ['React', 'Full-Stack', 'Meal Planning'],
+  },
 ];

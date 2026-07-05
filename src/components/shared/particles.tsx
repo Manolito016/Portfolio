@@ -1,22 +1,29 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 import { Particles } from '@tsparticles/react';
 import type { ISourceOptions } from '@tsparticles/engine';
 
-/** Connected-dots particle background — eGovPH style */
+/** Connected-dots particle background — adapts to dark/light mode */
 export function ParticlesBackground() {
-  const options = useMemo<ISourceOptions>(
-    () => ({
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const options = useMemo<ISourceOptions>(() => {
+    const isDark = resolvedTheme === 'dark';
+    return {
       fullScreen: { enable: false },
       fpsLimit: 60,
       particles: {
-        color: { value: '#3b82f6' },
+        color: { value: isDark ? '#60a5fa' : '#3b82f6' },
         links: {
           enable: true,
-          color: '#3b82f6',
+          color: isDark ? '#60a5fa' : '#3b82f6',
           distance: 150,
-          opacity: 0.2,
+          opacity: isDark ? 0.15 : 0.2,
           width: 1,
         },
         move: {
@@ -30,7 +37,7 @@ export function ParticlesBackground() {
           value: 60,
         },
         opacity: {
-          value: { min: 0.1, max: 0.3 },
+          value: { min: isDark ? 0.05 : 0.1, max: isDark ? 0.2 : 0.3 },
           animation: { enable: true, speed: 0.5, sync: false },
         },
         size: {
@@ -46,9 +53,10 @@ export function ParticlesBackground() {
         },
       },
       detectRetina: true,
-    }),
-    [],
-  );
+    };
+  }, [resolvedTheme]);
+
+  if (!mounted) return null;
 
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none">
