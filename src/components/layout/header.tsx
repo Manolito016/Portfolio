@@ -42,7 +42,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-lg group">
           <SiGithub className="h-6 w-6 text-[var(--gradient-start)] group-hover:text-[var(--gradient-end)] transition-colors" />
-          <span className="gradient-text">{siteConfig.displayName}</span>
+          <span className="gradient-text">Hello World!</span>
         </Link>
 
         {/* Desktop Nav */}
