@@ -41,24 +41,24 @@
   --card-foreground: #0a0a1a;
   --popover: rgba(255, 255, 255, 0.9);
   --popover-foreground: #0a0a1a;
-  --primary: #667eea;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --secondary: rgba(102, 126, 234, 0.1);
-  --secondary-foreground: #667eea;
-  --muted: rgba(102, 126, 234, 0.08);
+  --secondary: rgba(59, 130, 246, 0.1);
+  --secondary-foreground: #3b82f6;
+  --muted: rgba(59, 130, 246, 0.08);
   --muted-foreground: #64748b;
-  --accent: rgba(102, 126, 234, 0.12);
-  --accent-foreground: #667eea;
+  --accent: rgba(59, 130, 246, 0.12);
+  --accent-foreground: #3b82f6;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(102, 126, 234, 0.15);
-  --input: rgba(102, 126, 234, 0.15);
-  --ring: #667eea;
+  --border: rgba(59, 130, 246, 0.15);
+  --input: rgba(59, 130, 246, 0.15);
+  --ring: #3b82f6;
   --glass: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(255, 255, 255, 0.3);
   --glass-hover: rgba(255, 255, 255, 0.8);
-  --gradient-start: #667eea;
-  --gradient-end: #764ba2;
+  --gradient-start: #3b82f6;
+  --gradient-end: #06b6d4;
 }
 
 .dark {
@@ -68,24 +68,24 @@
   --card-foreground: #f0f0f5;
   --popover: rgba(20, 20, 40, 0.9);
   --popover-foreground: #f0f0f5;
-  --primary: #667eea;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --secondary: rgba(102, 126, 234, 0.15);
-  --secondary-foreground: #a5b4fc;
+  --secondary: rgba(59, 130, 246, 0.15);
+  --secondary-foreground: #7dd3fc;
   --muted: rgba(255, 255, 255, 0.05);
   --muted-foreground: rgba(255, 255, 255, 0.6);
-  --accent: rgba(102, 126, 234, 0.15);
-  --accent-foreground: #a5b4fc;
+  --accent: rgba(59, 130, 246, 0.15);
+  --accent-foreground: #7dd3fc;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
-  --ring: #667eea;
+  --ring: #3b82f6;
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-hover: rgba(255, 255, 255, 0.1);
-  --gradient-start: #667eea;
-  --gradient-end: #764ba2;
+  --gradient-start: #3b82f6;
+  --gradient-end: #06b6d4;
 }
 
 @layer base {
@@ -97,7 +97,7 @@
     font-family: var(--font-sans), system-ui, sans-serif;
   }
   .dark body {
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    background: linear-gradient(135deg, #0a0a1a 0%, #0f172a 50%, #0c1929 100%);
     background-attachment: fixed;
   }
 }
@@ -132,8 +132,8 @@
 
 .glass-card-hover:hover {
   background: var(--glass-hover);
-  border-color: rgba(102, 126, 234, 0.3);
-  box-shadow: 0 8px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 40px rgba(59, 130, 246, 0.15);
   transform: translateY(-2px);
 }
 
@@ -180,11 +180,11 @@
 }
 
 .glow-orb-purple {
-  background: radial-gradient(circle, #667eea, transparent 70%);
+  background: radial-gradient(circle, #3b82f6, transparent 70%);
 }
 
 .glow-orb-blue {
-  background: radial-gradient(circle, #764ba2, transparent 70%);
+  background: radial-gradient(circle, #06b6d4, transparent 70%);
 }
 
 .glow-orb-pink {
@@ -200,7 +200,7 @@
 }
 
 .btn-gradient:hover {
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
   transform: translateY(-1px);
 }
 
@@ -245,7 +245,7 @@
 
 /* Selection */
 ::selection {
-  background-color: rgba(102, 126, 234, 0.3);
+  background-color: rgba(59, 130, 246, 0.3);
   color: inherit;
 }
 

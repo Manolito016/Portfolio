@@ -4,6 +4,7 @@ import { Providers } from '@/components/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { BackToTop } from '@/components/shared/back-to-top';
+import { ParticlesBackground } from '@/components/shared/particles';
 import { siteConfig } from '@/config/site';
 import './globals.css';
 
@@ -78,6 +79,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Providers>
+          <ParticlesBackground />
           <Header />
           <main id="main-content" className="flex-1">
             {children}

@@ -2,6 +2,8 @@
 
 import { ThemeProvider } from 'next-themes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ParticlesProvider } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
 import { useState } from 'react';
 
 /** Application providers wrapper */
@@ -21,14 +23,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        {children}
-      </ThemeProvider>
+      <ParticlesProvider init={loadSlim}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </ParticlesProvider>
     </QueryClientProvider>
   );
 }
