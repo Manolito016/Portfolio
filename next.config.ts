@@ -1,13 +1,11 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/Portfolio',
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
-      { protocol: 'https', hostname: 'github.com' },
-    ],
+    unoptimized: true,
   },
-  output: 'standalone',
   experimental: {
     optimizePackageImports: ['react-icons', 'lucide-react'],
   },
